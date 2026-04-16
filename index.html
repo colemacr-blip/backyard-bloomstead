@@ -3,215 +3,429 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Backyard Bloomstead — Flowers from our garden, turned into gifts with meaning</title>
-  <meta name="description" content="Backyard Bloomstead is a flower brand rooted in a real garden. Fresh bouquets, digital floral art, and gifts with meaning — inspired by Posie.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>Backyard Bloomstead — Style Direction Review</title>
+  <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory:     #FAF7F2;
+      --cream:     #F5F0EA;
+      --parchment: #EDE8E1;
+      --bark:      #2C2118;
+      --taupe:     #8A7E74;
+      --rose:      #C4918A;
+      --rose-light:#E8D5D0;
+      --rose-pale: #F5EDEA;
+      --sage:      #9BA88C;
+      --sage-light:#D8E0D0;
+      --sage-pale: #EEF1EA;
+      --gold:      #D4B896;
+      --border:    #DDD6CC;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--bark);
+      background: var(--ivory);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* --- Hero --- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background:
+        linear-gradient(160deg, var(--ivory) 0%, var(--rose-pale) 40%, var(--sage-pale) 70%, var(--ivory) 100%);
+    }
+
+    .hero__inner {
+      max-width: 680px;
+    }
+
+    .hero__label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      line-height: 1.15;
+      color: var(--bark);
+      margin-bottom: 1rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.05rem;
+      color: var(--taupe);
+      font-weight: 300;
+      max-width: 520px;
+      margin: 0 auto 0.5rem;
+      line-height: 1.7;
+    }
+
+    .hero__note {
+      font-size: 0.85rem;
+      color: var(--rose);
+      margin-top: 2rem;
+      font-weight: 400;
+    }
+
+    /* --- Cards section --- */
+    .options {
+      padding: 5rem 1.5rem 7rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .options__header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .options__label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 1rem;
+    }
+
+    .options__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--bark);
+      margin-bottom: 0.75rem;
+    }
+
+    .options__subtitle {
+      font-size: 0.95rem;
+      color: var(--taupe);
+      font-weight: 300;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .cards { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(44,33,24,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(44,33,24,0.09);
+    }
+
+    .card__preview {
+      aspect-ratio: 4/3;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+
+    .card__preview--v0 {
+      background: linear-gradient(135deg, #FBF2F1, #F0F5ED);
+    }
+    .card__preview--v1 {
+      background: var(--rose-pale);
+    }
+    .card__preview--v2 {
+      background: var(--sage-pale);
+    }
+    .card__preview--v3 {
+      background: var(--parchment);
+    }
+
+    .card__preview-brand {
+      font-size: 1.6rem;
+      color: var(--bark);
+      line-height: 1.2;
+    }
+
+    .card__preview-heading {
+      font-size: 1.3rem;
+      color: var(--bark);
+      line-height: 1.2;
+    }
+
+    .card__preview-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--taupe);
+      font-weight: 300;
+    }
+
+    /* V0: Charm + original bright palette */
+    .card__preview--v0 .card__preview-brand,
+    .card__preview--v0 .card__preview-heading {
+      font-family: 'Charm', cursive;
+      font-weight: 700;
+      color: #6B3A2A;
+    }
+
+    /* V1: Charm everywhere */
+    .card__preview--v1 .card__preview-brand,
+    .card__preview--v1 .card__preview-heading {
+      font-family: 'Charm', cursive;
+      font-weight: 700;
+    }
+
+    /* V2: Charm brand + Cormorant headings */
+    .card__preview--v2 .card__preview-brand {
+      font-family: 'Charm', cursive;
+      font-weight: 700;
+    }
+    .card__preview--v2 .card__preview-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    /* V3: Cormorant everywhere */
+    .card__preview--v3 .card__preview-brand,
+    .card__preview--v3 .card__preview-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+    }
+
+    .card__body {
+      padding: 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card__tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.75rem;
+    }
+
+    .card__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--bark);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .card__desc {
+      font-size: 0.9rem;
+      color: var(--taupe);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .card__details {
+      font-size: 0.82rem;
+      color: var(--taupe);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card__details strong {
+      color: var(--bark);
+      font-weight: 500;
+    }
+
+    .card__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      background: var(--bark);
+      color: var(--ivory);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .card__cta:hover {
+      background: var(--taupe);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(44,33,24,0.15);
+    }
+
+    /* --- Footer --- */
+    .footer {
+      background: var(--bark);
+      color: var(--parchment);
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 0.82rem;
+      opacity: 0.7;
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .footer a {
+      color: var(--rose-light);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="nav">
-    <div class="container">
-      <a href="index.html" class="nav__brand">Backyard Bloomstead</a>
-      <button class="nav__toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="posie.html">Meet Posie</a></li>
-        <li><a href="cart.html">Visit the Cart</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="#">About the Garden</a></li>
-        <li><a href="#">Flower Meanings</a></li>
-        <li><a href="#">Journal</a></li>
-        <li><a href="#signup" class="btn btn--soft" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Join the Garden List</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="hero__bg">
-      <img src="images/flower-farm.jpg" alt="Backyard Bloomstead flower farm in full bloom">
-    </div>
-    <div class="hero__overlay"></div>
-    <div class="container">
-      <div class="hero__content">
-        <h1>Flowers from our garden, turned into gifts with meaning.</h1>
-        <p>Backyard Bloomstead is a flower brand rooted in a real backyard garden — where every bloom carries beauty, memory, and story.</p>
-        <div class="hero__actions">
-          <a href="shop.html" class="btn btn--primary">Shop Digital Art</a>
-          <a href="cart.html" class="btn btn--secondary">Find the Flower Cart</a>
-        </div>
-      </div>
+    <div class="hero__inner">
+      <p class="hero__label">Style Direction Review</p>
+      <h1 class="hero__title">Backyard Bloomstead</h1>
+      <p class="hero__subtitle">Four style directions to compare — from the original simple approach to three variations of the updated editorial design system with botanical palette, premium spacing, and scroll animations.</p>
+      <p class="hero__subtitle">Explore each to see how the font choice shapes the brand's personality.</p>
+      <p class="hero__note">Scroll down to choose a version</p>
     </div>
   </section>
 
-  <!-- ===== INTRO ===== -->
-  <section class="section">
-    <div class="container text-center">
-      <h2>More than flowers.</h2>
-      <p class="subtitle mx-auto">We grow cut flowers, create floral art, and build meaningful gifts — all from a real backyard garden. Every product in the Posie line is inspired by the memory of a small rescue cat who loved to nap among the zinnias.</p>
+  <section class="options">
+    <div class="options__header">
+      <p class="options__label">Choose a Direction</p>
+      <h2 class="options__title">Four Versions to Compare</h2>
+      <p class="options__subtitle">The Simple approach uses the original palette and layout. Versions 1–3 share the updated editorial design system and differ only in typography.</p>
     </div>
-  </section>
 
-  <!-- ===== POSIE FEATURE ===== -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="feature">
-        <div class="feature__image">
-          <img src="images/posie-cat-6.jpg" alt="Posie the cat looking through the window — the rescue cat who inspired the brand">
-        </div>
-        <div class="feature__text">
-          <h2>Meet Posie</h2>
-          <p>In 2024, a small rescue cat appeared from under the cottage across the street. She endured an ice storm, slowly learned to trust us, and found her sanctuary among the zinnias and dahlias of our garden.</p>
-          <p>Though her time with us was brief, Posie's spirit lives on in every bloom we grow and every gift we create.</p>
-          <a href="posie.html" class="btn btn--soft mt-sm">Read Posie's Story</a>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="cards">
 
-  <!-- ===== FLOWER CART ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="feature feature--reverse">
-        <div class="feature__image">
-          <img src="images/flower-cart-girls.jpg" alt="Gracen and Sophia at the Backyard Bloomstead flower cart">
+      <!-- V0: Simple / Original -->
+      <div class="card">
+        <div class="card__preview card__preview--v0">
+          <div class="card__preview-brand">Backyard Bloomstead</div>
+          <div class="card__preview-heading">Flowers with Meaning</div>
+          <div class="card__preview-body">Body text in DM Sans stays clean and readable</div>
         </div>
-        <div class="feature__text">
-          <h2>Visit the Flower Cart</h2>
-          <p>Find us locally with fresh-cut bouquets, mason jar arrangements, and our signature Bloom Bar where you can build your own Petite Posie.</p>
-          <p>Bouquets from <strong>$10</strong> &mdash; grown with care, arranged with meaning.</p>
-          <a href="cart.html" class="btn btn--secondary mt-sm">Cart Locations &amp; Schedule</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FEATURED PRODUCTS ===== -->
-  <section class="section section--green">
-    <div class="container">
-      <div class="text-center mb-lg">
-        <h2>From the Shop</h2>
-        <p class="subtitle mx-auto">Digital floral art you can download instantly — prints that carry the beauty and meaning of real garden flowers.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="card__image">
-            <img src="images/bb-label.jpg" alt="Backyard Bloomstead garden watercolor art">
+        <div class="card__body">
+          <span class="card__tag">Simple Approach</span>
+          <h3 class="card__title">Original Style</h3>
+          <p class="card__desc">The first design pass — bright pink and green palette, pill-shaped buttons, standard card layouts, Charm font throughout. Direct match to the physical cart's colors and signage.</p>
+          <div class="card__details">
+            <strong>Display:</strong> Charm (cursive, bold)<br>
+            <strong>Body:</strong> DM Sans<br>
+            <strong>Palette:</strong> Bright pink, apple green, maroon<br>
+            <strong>Character:</strong> Colorful, direct, cart-forward
           </div>
-          <div class="card__body">
-            <h4>Garden Path — Digital Print</h4>
-            <p>American watercolor garden scene inspired by the Bloomstead grounds.</p>
-            <span class="card__price">$8.00</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__image">
-            <img src="images/flower-art.jpg" alt="Floral art print with dahlias and zinnias">
-          </div>
-          <div class="card__body">
-            <h4>Dahlia Dreams — Digital Print</h4>
-            <p>Vibrant dahlias and garden blooms in rich watercolor detail.</p>
-            <span class="card__price">$8.00</span>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__image">
-            <img src="images/petite-posie-outside.jpg" alt="Petite flower bouquets arranged in vintage jars">
-          </div>
-          <div class="card__body">
-            <h4>Petite Posie Collection — Digital Print</h4>
-            <p>A set of vintage jar arrangements from the flower cart.</p>
-            <span class="card__price">$12.00</span>
-          </div>
+          <a href="v0/index.html" class="card__cta">Explore Simple</a>
         </div>
       </div>
-      <div class="text-center mt-lg">
-        <a href="shop.html" class="btn btn--primary">Browse All Art</a>
+
+      <!-- V1 -->
+      <div class="card">
+        <div class="card__preview card__preview--v1">
+          <div class="card__preview-brand">Backyard Bloomstead</div>
+          <div class="card__preview-heading">Flowers with Meaning</div>
+          <div class="card__preview-body">Body text in DM Sans stays clean and readable</div>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Version 1</span>
+          <h3 class="card__title">Charm Everywhere</h3>
+          <p class="card__desc">The original style guide font used for all headings and the brand name. Matches the physical cart signage directly. Feels handmade, personal, garden-rooted.</p>
+          <div class="card__details">
+            <strong>Display:</strong> Charm (cursive, bold)<br>
+            <strong>Body:</strong> DM Sans<br>
+            <strong>Character:</strong> Handwritten warmth, craft-forward, personal
+          </div>
+          <a href="v1/index.html" class="card__cta">Explore Version 1</a>
+        </div>
       </div>
+
+      <!-- V2 -->
+      <div class="card">
+        <div class="card__preview card__preview--v2">
+          <div class="card__preview-brand">Backyard Bloomstead</div>
+          <div class="card__preview-heading">Flowers with Meaning</div>
+          <div class="card__preview-body">Body text in DM Sans stays clean and readable</div>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Version 2</span>
+          <h3 class="card__title">Charm + Serif Hybrid</h3>
+          <p class="card__desc">Charm for the brand name only (preserving cart-signage continuity), Cormorant Garamond for all headings. Best of both — editorial sophistication with a personal brand signature.</p>
+          <div class="card__details">
+            <strong>Brand name:</strong> Charm (cursive, bold)<br>
+            <strong>Headings:</strong> Cormorant Garamond (serif)<br>
+            <strong>Body:</strong> DM Sans<br>
+            <strong>Character:</strong> Editorial warmth with a personal signature
+          </div>
+          <a href="v2/index.html" class="card__cta">Explore Version 2</a>
+        </div>
+      </div>
+
+      <!-- V3 -->
+      <div class="card">
+        <div class="card__preview card__preview--v3">
+          <div class="card__preview-brand">Backyard Bloomstead</div>
+          <div class="card__preview-heading">Flowers with Meaning</div>
+          <div class="card__preview-body">Body text in DM Sans stays clean and readable</div>
+        </div>
+        <div class="card__body">
+          <span class="card__tag">Version 3</span>
+          <h3 class="card__title">Full Editorial Serif</h3>
+          <p class="card__desc">Cormorant Garamond for everything — brand name and all headings. Fully editorial, European-boutique feel. Maximum sophistication and visual consistency.</p>
+          <div class="card__details">
+            <strong>All display:</strong> Cormorant Garamond (serif)<br>
+            <strong>Body:</strong> DM Sans<br>
+            <strong>Character:</strong> Literary elegance, boutique premium, fully editorial
+          </div>
+          <a href="v3/index.html" class="card__cta">Explore Version 3</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ===== FLORIOGRAPHY TEASER ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="feature">
-        <div class="feature__image">
-          <img src="images/flower-chart.jpg" alt="Flowers and their meanings — floriography chart">
-        </div>
-        <div class="feature__text">
-          <h2>Flower Meanings</h2>
-          <p>Every flower speaks. For centuries, people have used flowers to convey emotions too deep for words — love, remembrance, gratitude, hope.</p>
-          <p>We're building a modern floriography — a living guide to flower meanings rooted in our garden and inspired by the language of blooms.</p>
-          <a href="#" class="btn btn--soft mt-sm">Explore Flower Meanings</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== VIDEO TEASER ===== -->
-  <section class="section section--alt">
-    <div class="container text-center">
-      <h2>From the Garden</h2>
-      <p class="subtitle mx-auto">Follow our growing season — time-lapses, harvests, bouquet making, and life behind the flower cart.</p>
-      <div class="mt-lg" style="max-width: 700px; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; background: var(--border); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;">
-        <p style="color: var(--text-light); font-size: 0.95rem; margin: 0;">YouTube video embed — Backyard Bloomstead channel</p>
-      </div>
-      <a href="#" class="btn btn--secondary mt-lg">Watch More</a>
-    </div>
-  </section>
-
-  <!-- ===== EMAIL SIGNUP ===== -->
-  <section class="signup" id="signup">
-    <div class="container">
-      <div class="signup__inner">
-        <h2>Join the Garden List</h2>
-        <p>Be the first to know about cart updates, new art releases, custom gift launches, and seasonal offerings from the garden.</p>
-        <form class="signup__form" onsubmit="event.preventDefault(); alert('Thank you for joining!');">
-          <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn--primary">Join</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <h3>Backyard Bloomstead</h3>
-          <p>A division of Her Sanctuary LLC. Flowers from our garden, turned into gifts with meaning.</p>
-        </div>
-        <div class="footer__col">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="posie.html">Meet Posie</a></li>
-            <li><a href="cart.html">Visit the Cart</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">About the Garden</a></li>
-            <li><a href="#">Flower Meanings</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Connect</h4>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">TikTok</a></li>
-            <li><a href="#signup">Join the Garden List</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span>&copy; 2026 Backyard Bloomstead &middot; Her Sanctuary LLC</span>
-        <span>backyardbloomstead.com</span>
-      </div>
-    </div>
+    <p>Backyard Bloomstead — Style Direction Review<br>All versions use the updated editorial design system with muted botanical palette, premium spacing, scroll-reveal animations, and gallery-like product presentation.<br><br>All versions include: Home, Meet Posie, Visit the Cart, and Shop pages.</p>
   </footer>
 
-  <script src="js/main.js"></script>
 </body>
 </html>

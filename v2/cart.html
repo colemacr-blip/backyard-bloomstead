@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit the Flower Cart — Backyard Bloomstead</title>
+  <meta name="description" content="Find the Backyard Bloomstead flower cart near you. Fresh-cut bouquets, Posie arrangements, and our seasonal Bloom Bar." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="nav" role="banner">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">Backyard Bloomstead</a>
+
+      <nav class="nav__links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="posie.html">Meet Posie</a>
+        <a href="cart.html" class="active">Visit the Cart</a>
+        <a href="shop.html">Shop</a>
+        <a href="#">About the Garden</a>
+        <a href="#">Flower Meanings</a>
+        <a href="#">Journal</a>
+        <a href="#signup">Join the Garden List</a>
+      </nav>
+
+      <button class="nav__hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="posie.html">Meet Posie</a>
+    <a href="cart.html">Visit the Cart</a>
+    <a href="shop.html">Shop</a>
+    <a href="#">About the Garden</a>
+    <a href="#">Flower Meanings</a>
+    <a href="#">Journal</a>
+    <a href="#signup">Join the Garden List</a>
+  </nav>
+
+  <main>
+
+    <!-- ============================================================
+         PAGE HEADER
+         ============================================================ -->
+    <header class="page-header" aria-label="Page header">
+      <span class="label">Fresh from the Garden</span>
+      <h1>Visit the Flower Cart</h1>
+      <p class="subtitle">Hand-tied bouquets, seasonal arrangements, and our Bloom Bar &mdash; brought straight to your neighborhood from our backyard.</p>
+    </header>
+
+    <!-- ============================================================
+         HERO IMAGE — full-width, 400px height
+         ============================================================ -->
+    <div role="img" aria-label="The Backyard Bloomstead flower cart with Sophia and Sooz">
+      <img
+        src="../images/flowercart-sophia-sooz.jpg"
+        alt="Sophia and Sooz at the Backyard Bloomstead flower cart, surrounded by fresh blooms"
+        class="full-image"
+        width="1200"
+        height="400"
+        loading="eager"
+      />
+    </div>
+
+    <!-- ============================================================
+         LOCATION + BLOOM BAR — two-column
+         ============================================================ -->
+    <section class="section reveal" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">Come See Us</span>
+          <h2 id="location-heading">Where &amp; When to Find Us</h2>
+        </div>
+
+        <div class="two-col">
+          <!-- Left: Find Us -->
+          <div class="two-col__box">
+            <span class="label" style="display:block; margin-bottom: var(--space-sm);">Find Us</span>
+            <h3>Cart Schedule</h3>
+            <p>Our cart pops up seasonally throughout the growing season &mdash; typically late spring through fall. We announce our schedule via Instagram and our Garden List email.</p>
+
+            <div class="schedule-note">
+              <strong>Growing Season:</strong> May &ndash; October<br />
+              <strong>Frequency:</strong> Weekly &amp; select weekends<br />
+              <strong>Locations:</strong> Neighborhood markets &amp; private events
+            </div>
+
+            <address>
+              <p>Available for private events, pop-ups, and markets. Reach out to arrange a cart visit for your venue or neighborhood.</p>
+            </address>
+
+            <div style="margin-top: var(--space-md);">
+              <a href="#signup" class="btn btn--primary">Get Cart Updates</a>
+            </div>
+          </div>
+
+          <!-- Right: Bloom Bar -->
+          <div class="two-col__box">
+            <span class="label" style="display:block; margin-bottom: var(--space-sm);">At the Cart</span>
+            <h3>The Bloom Bar</h3>
+            <p>Our Bloom Bar lets you build your own arrangement from seasonal stems laid out on the cart. Choose your blooms, your greenery, your wrapping &mdash; and walk away with something entirely your own.</p>
+            <p>Each visit to the Bloom Bar is a little different, because the garden is always changing. What&rsquo;s available depends on what&rsquo;s in peak bloom that week.</p>
+            <p>We are also available through <strong>Solin Sanctuary</strong> for event florals and coordinated floral experiences. Ask us about availability at your next event.</p>
+
+            <div style="margin-top: var(--space-md);">
+              <a href="#signup" class="btn btn--soft">Follow for Updates</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRODUCT MENU — parchment bg
+         5 vertical products
+         ============================================================ -->
+    <section class="section section--parchment reveal" aria-labelledby="menu-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">At the Cart</span>
+          <h2 id="menu-heading">What We Carry</h2>
+          <p>Seasonal stems cut fresh from the garden, arranged with care. Prices reflect each week&rsquo;s harvest &mdash; no two arrangements are ever exactly the same.</p>
+        </div>
+
+        <div class="product-menu" style="max-width: 680px; margin: 0 auto;">
+
+          <!-- 1. Petite Posie -->
+          <article class="product-item">
+            <div class="product-item__image">
+              <img
+                src="../images/petite-posie.jpg"
+                alt="Petite Posie arrangement"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-item__info">
+              <h3 class="product-item__name">Petite Posie</h3>
+              <p class="product-item__desc">A small, sweet posy of fresh seasonal blooms &mdash; perfect for a bud vase or to tuck behind a card.</p>
+            </div>
+            <span class="product-item__price">$10</span>
+          </article>
+
+          <!-- 2. Sweet Posie -->
+          <article class="product-item">
+            <div class="product-item__placeholder">
+              <span>Sweet<br />Posie</span>
+            </div>
+            <div class="product-item__info">
+              <h3 class="product-item__name">Sweet Posie</h3>
+              <p class="product-item__desc">A step up from the petite &mdash; a fuller, hand-tied arrangement of the week&rsquo;s best blooms, wrapped in kraft and twine.</p>
+            </div>
+            <span class="product-item__price">$15</span>
+          </article>
+
+          <!-- 3. Posie Bag -->
+          <article class="product-item">
+            <div class="product-item__image">
+              <img
+                src="../images/petite-posie-outside.jpg"
+                alt="Posie Bag arrangement"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-item__info">
+              <h3 class="product-item__name">Posie Bag</h3>
+              <p class="product-item__desc">Fresh stems nestled in a keepsake kraft bag &mdash; a ready-made gift straight from the cart. Includes care card.</p>
+            </div>
+            <span class="product-item__price">$20</span>
+          </article>
+
+          <!-- 4. Mason Jar -->
+          <article class="product-item">
+            <div class="product-item__image">
+              <img
+                src="../images/mason-jar.jpg"
+                alt="Mason Jar floral arrangement"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-item__info">
+              <h3 class="product-item__name">Mason Jar</h3>
+              <p class="product-item__desc">A generous arrangement in a vintage-style mason jar, ready to display. A garden moment you can bring indoors.</p>
+            </div>
+            <span class="product-item__price">$25</span>
+          </article>
+
+          <!-- 5. Mixed Bouquet -->
+          <article class="product-item">
+            <div class="product-item__image">
+              <img
+                src="../images/flower-cart-girls.jpg"
+                alt="A large mixed bouquet from the flower cart"
+                loading="lazy"
+              />
+            </div>
+            <div class="product-item__info">
+              <h3 class="product-item__name">Mixed Bouquet</h3>
+              <p class="product-item__desc">Our signature bouquet &mdash; a generous mix of the week&rsquo;s peak blooms, hand-tied and wrapped for gifting or display.</p>
+            </div>
+            <span class="product-item__price">$35</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CARE FAQ
+         ============================================================ -->
+    <section class="section reveal" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-title">
+          <span class="label">Flower Care</span>
+          <h2 id="faq-heading">Caring for Your Blooms</h2>
+          <p>A few simple steps will keep your fresh arrangements looking their best for as long as possible.</p>
+        </div>
+
+        <div class="faq">
+
+          <div class="faq__item">
+            <h3 class="faq__question">How long will my fresh arrangement last?</h3>
+            <p class="faq__answer">
+              With proper care, most of our fresh-cut arrangements will last 5&ndash;10 days. To maximize longevity: trim stems at a diagonal before placing in water, use a clean vase with fresh cold water, and keep your arrangement out of direct sunlight and away from heat sources. Change the water every 2&ndash;3 days and re-trim stems with each change for the best results.
+            </p>
+          </div>
+
+          <div class="faq__item">
+            <h3 class="faq__question">How do I care for a Posie Bag?</h3>
+            <p class="faq__answer">
+              The Posie Bag is designed as a gift-ready arrangement, so it travels well &mdash; but once you&rsquo;re home, remove the stems from the bag and place them in water as soon as possible. Trim the ends at a 45&deg; angle before placing in a clean vase. The kraft bag can be reused as a planter liner, gift wrap, or keepsake. Each Posie Bag includes a printed care card with detailed instructions.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EMAIL SIGNUP
+         ============================================================ -->
+    <section class="email-signup reveal" id="signup" aria-labelledby="cart-signup-heading">
+      <div class="email-signup__inner">
+        <span class="label">Never Miss the Cart</span>
+        <h2 id="cart-signup-heading">Join the Garden List</h2>
+        <p>Cart schedules, growing season updates, new art drops, and quiet notes from the garden. No noise &mdash; just blooms.</p>
+        <form class="email-form" novalidate aria-label="Email signup form">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            aria-label="Email address"
+            required
+          />
+          <button type="submit" class="btn btn--primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <span class="footer__brand">Backyard Bloomstead</span>
+          <p>A flower brand rooted in a real backyard garden &mdash; where every bloom carries beauty, memory, and story.</p>
+        </div>
+
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="posie.html">Meet Posie</a></li>
+            <li><a href="cart.html">Visit the Cart</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">About the Garden</a></li>
+            <li><a href="#">Flower Meanings</a></li>
+            <li><a href="#">Journal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <address>
+            <p>Located in the heart of the garden.<br />Available locally &amp; online.</p>
+          </address>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Etsy Shop</a></li>
+            <li><a href="#signup">Join the Garden List</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 Backyard Bloomstead. All rights reserved. Grown with love.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

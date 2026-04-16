@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Backyard Bloomstead</title>
+  <meta name="description" content="Digital floral art from Backyard Bloomstead — instant download prints inspired by real flowers growing in our garden." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__brand">Backyard Bloomstead</a>
+
+        <!-- Desktop links -->
+        <ul class="nav__links" role="list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="posie.html" class="nav__link">Meet Posie</a></li>
+          <li><a href="cart.html" class="nav__link">Visit the Cart</a></li>
+          <li><a href="shop.html" class="nav__link active">Shop</a></li>
+          <li><a href="#" class="nav__link">About the Garden</a></li>
+          <li><a href="#" class="nav__link">Flower Meanings</a></li>
+          <li><a href="#" class="nav__link">Journal</a></li>
+          <li><a href="#signup" class="nav__link nav__link--cta">Join the Garden List</a></li>
+        </ul>
+
+        <!-- Hamburger (mobile) -->
+        <button
+          class="nav__hamburger"
+          id="nav-hamburger"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-drawer"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__drawer" id="nav-drawer" role="menu">
+      <a href="index.html" class="nav__link" role="menuitem">Home</a>
+      <a href="posie.html" class="nav__link" role="menuitem">Meet Posie</a>
+      <a href="cart.html" class="nav__link" role="menuitem">Visit the Cart</a>
+      <a href="shop.html" class="nav__link active" role="menuitem">Shop</a>
+      <a href="#" class="nav__link" role="menuitem">About the Garden</a>
+      <a href="#" class="nav__link" role="menuitem">Flower Meanings</a>
+      <a href="#" class="nav__link" role="menuitem">Journal</a>
+      <a href="#signup" class="nav__link nav__link--cta" role="menuitem">Join the Garden List</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         PAGE HEADER — rose-pale, centered
+         ============================================================ -->
+    <section class="page-header" aria-label="Page header">
+      <h1>Shop</h1>
+      <p class="page-header__subtitle">
+        Digital floral art — instant download, lasting beauty.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         SHOP INTRO — centered text
+         ============================================================ -->
+    <section class="section-pad--sm bg-ivory" aria-label="Shop introduction">
+      <div class="container">
+        <div class="shop-intro">
+          <p>
+            Every piece is inspired by the real flowers growing in our garden.
+            Download instantly, print at home or through your favorite print service.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRODUCT GRID — responsive auto-fill
+         ============================================================ -->
+    <section class="section-pad bg-ivory reveal" aria-label="Digital floral art products">
+      <div class="container">
+
+        <div class="product-grid reveal-stagger">
+
+          <!-- Card 1: Garden Path -->
+          <article class="card">
+            <div class="card__image-wrap">
+              <img
+                src="../images/bb-label.jpg"
+                alt="Garden Path — American watercolor garden scene with sunflowers and dahlias"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__label">Instant Download</span>
+              <h4 class="card__title">Garden Path</h4>
+              <p class="card__desc">
+                American watercolor garden scene — sunflowers, dahlias, and the garden path.
+              </p>
+              <p class="card__price">$8.00</p>
+              <button class="btn btn--soft" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Card 2: Dahlia Dreams -->
+          <article class="card">
+            <div class="card__image-wrap">
+              <img
+                src="../images/flower-art.jpg"
+                alt="Dahlia Dreams — rich dahlias and garden blooms in warm vibrant detail"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__label">Instant Download</span>
+              <h4 class="card__title">Dahlia Dreams</h4>
+              <p class="card__desc">
+                Rich dahlias and garden blooms in warm, vibrant detail.
+              </p>
+              <p class="card__price">$8.00</p>
+              <button class="btn btn--soft" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Card 3: Vintage Jar Collection -->
+          <article class="card">
+            <div class="card__image-wrap">
+              <img
+                src="../images/petite-posie-outside.jpg"
+                alt="Vintage Jar Collection — five vintage jar arrangements with seasonal blooms"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__label">Instant Download</span>
+              <h4 class="card__title">Vintage Jar Collection</h4>
+              <p class="card__desc">
+                Five vintage jar arrangements featuring seasonal blooms.
+              </p>
+              <p class="card__price">$12.00</p>
+              <button class="btn btn--soft" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Card 4: Zinnia Study -->
+          <article class="card">
+            <div class="card__image-wrap">
+              <img
+                src="../images/flower-chart.jpg"
+                alt="Zinnia Study — botanical study of zinnias, Posie's favorite bloom"
+                loading="lazy"
+              />
+            </div>
+            <div class="card__body">
+              <span class="card__label">Instant Download</span>
+              <h4 class="card__title">Zinnia Study</h4>
+              <p class="card__desc">
+                Zinnias were Posie's favorite. A botanical study of the garden's most resilient bloom.
+              </p>
+              <p class="card__price">$8.00</p>
+              <button class="btn btn--soft" type="button">Add to Cart</button>
+            </div>
+          </article>
+
+        </div><!-- /.product-grid -->
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PET ART TEASER — feature block, parchment bg
+         ============================================================ -->
+    <section class="section-pad bg-parchment reveal" aria-label="Custom pet art coming soon">
+      <div class="container">
+        <div class="feature-block">
+
+          <!-- Placeholder box (image side) -->
+          <div class="placeholder-box placeholder-box--rose">
+            <p class="placeholder-box__text">Coming Soon — Custom pet portraits</p>
+          </div>
+
+          <div class="feature-block__text">
+            <h2>Custom Pet Art</h2>
+            <p>
+              Our garden is home to many creatures — and we believe every beloved
+              pet deserves to be immortalized in beautiful floral art. Each custom
+              pet portrait is hand-illustrated and surrounded by blooms that carry
+              meaning for you and your animal companion.
+            </p>
+            <p>
+              Custom pet portraits are launching soon. Get notified when they're
+              available and receive early access pricing.
+            </p>
+            <div class="btn-group">
+              <a href="#signup" class="btn btn--primary">Get Notified</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CUSTOM GIFT TEASER — feature block reversed
+         ============================================================ -->
+    <section class="section-pad bg-ivory reveal" aria-label="Custom gift art coming in Phase 2">
+      <div class="container">
+        <div class="feature-block feature-block--reversed">
+
+          <!-- Placeholder box (image side) -->
+          <div class="placeholder-box placeholder-box--sage">
+            <p class="placeholder-box__text">Phase 2 — Birth flower &amp; family art</p>
+          </div>
+
+          <div class="feature-block__text">
+            <h2>Custom Gift Art</h2>
+            <p>
+              We're building a full line of personalized floral gift art — featuring
+              birth flowers for individuals and couples, family portraits with
+              meaningful blooms, and bespoke designs for every milestone.
+            </p>
+            <p>
+              Think: a wedding anniversary piece with the birth flowers of both
+              partners, or a new baby gift featuring the flower of the month they
+              were born. These are gifts that carry lasting meaning — rooted in the
+              real language of flowers.
+            </p>
+            <div class="btn-group">
+              <a href="#signup" class="btn btn--secondary">Join for Early Access</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EMAIL SIGNUP
+         ============================================================ -->
+    <section class="section-pad signup reveal" id="signup" aria-label="Join the garden list email signup">
+      <div class="container">
+        <div class="signup__inner">
+          <h2>Join the Garden List</h2>
+          <p>
+            Be the first to know about cart updates, new art releases, custom
+            gift launches, and seasonal offerings from the garden.
+          </p>
+          <form class="signup__form" novalidate>
+            <input
+              type="email"
+              class="signup__input"
+              placeholder="Your email address"
+              aria-label="Email address"
+              required
+            />
+            <button type="submit" class="btn btn--primary">Join</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="footer__col">
+        <span class="footer__brand-name">Backyard Bloomstead</span>
+        <p class="footer__tagline">
+          A division of Her Sanctuary LLC.<br />
+          Flowers from our garden, turned into gifts with meaning.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <span class="footer__col-title">Explore</span>
+        <ul class="footer__links" role="list">
+          <li><a href="posie.html" class="footer__link">Meet Posie</a></li>
+          <li><a href="cart.html" class="footer__link">Visit the Cart</a></li>
+          <li><a href="shop.html" class="footer__link">Shop</a></li>
+          <li><a href="#" class="footer__link">About the Garden</a></li>
+          <li><a href="#" class="footer__link">Flower Meanings</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <span class="footer__col-title">Connect</span>
+        <ul class="footer__links" role="list">
+          <li><a href="#" class="footer__link">Instagram</a></li>
+          <li><a href="#" class="footer__link">YouTube</a></li>
+          <li><a href="#" class="footer__link">TikTok</a></li>
+          <li><a href="#signup" class="footer__link">Join the Garden List</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">
+        &copy; 2026 Backyard Bloomstead &middot; Her Sanctuary LLC
+        &nbsp;|&nbsp; backyardbloomstead.com
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
