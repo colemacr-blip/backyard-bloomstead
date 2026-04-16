@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Backyard Bloomstead — Spring is Here</title>
+<meta name="description" content="Find Backyard Bloomstead's fresh spring bouquets at our Eugene and Springfield, Oregon pop-up carts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #fdf8ec;
+    --paper-deep: #f7edd3;
+    --ink: #2a2438;
+    --ink-soft: #5e5370;
+    --sage: #5d8a4e;
+    --sage-deep: #3f6b36;
+    --rose: #e7438a;
+    --rose-deep: #c92d72;
+    --gold: #f4ab2a;
+    --violet: #6a4fb8;
+    --border: rgba(106, 79, 184, 0.22);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* subtle paper grain */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+  }
+
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 32px 80px;
+  }
+
+  /* decorative corner sprigs */
+  .sprig {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .sprig-tl { top: 16px; left: 16px; transform: rotate(0deg); }
+  .sprig-br { bottom: 24px; right: 16px; transform: rotate(180deg); }
+
+  @media (max-width: 600px) {
+    .sprig { width: 90px; height: 90px; opacity: 0.4; }
+    .page { padding: 80px 22px 64px; }
+  }
+
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    text-align: center;
+    margin-bottom: 28px;
+    animation: fadeUp 0.9s ease-out both;
+  }
+
+  .eyebrow::before, .eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--sage-deep);
+    vertical-align: middle;
+    margin: 0 14px;
+    opacity: 0.6;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(44px, 8vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 18px;
+    animation: fadeUp 1s ease-out 0.1s both;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--rose-deep);
+  }
+
+  .tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(17px, 2.2vw, 20px);
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 48px;
+    animation: fadeUp 1s ease-out 0.2s both;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 56px;
+    animation: fadeUp 1s ease-out 0.3s both;
+  }
+
+  .divider svg { width: 180px; height: auto; }
+
+  .sub-heading {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(20px, 3vw, 24px);
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease-out 0.35s both;
+  }
+
+  .locations {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .location {
+    position: relative;
+    padding: 32px 28px;
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    animation: fadeUp 1s ease-out both;
+  }
+  .location:nth-child(1) { animation-delay: 0.45s; }
+  .location:nth-child(2) { animation-delay: 0.6s; }
+
+  .location::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 28px;
+    width: 48px;
+    height: 4px;
+    background: var(--rose);
+  }
+
+  .day {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--sage-deep);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .time {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--violet);
+    margin-bottom: 16px;
+  }
+
+  .place {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 19px;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+
+  .address {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .address-note {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--sage-deep);
+    margin-top: 4px;
+  }
+
+  footer {
+    margin-top: 64px;
+    text-align: center;
+    animation: fadeUp 1s ease-out 0.75s both;
+  }
+
+  .brand {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 8px;
+  }
+
+  .coming-soon {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 22px;
+    border: 1.5px solid var(--rose);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- decorative sprigs -->
+<svg class="sprig sprig-tl" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g fill="none" stroke="#5d8a4e" stroke-width="1.5" stroke-linecap="round">
+    <path d="M20 20 Q 50 60, 70 110"/>
+    <path d="M30 35 Q 45 40, 50 55" />
+    <path d="M40 55 Q 55 60, 58 75" />
+    <path d="M50 80 Q 65 82, 68 95" />
+    <path d="M25 28 Q 40 18, 50 22" />
+    <path d="M36 48 Q 52 42, 58 48" />
+  </g>
+  <g>
+    <circle cx="22" cy="22" r="5" fill="#e7438a"/>
+    <circle cx="22" cy="22" r="2" fill="#f4ab2a"/>
+    <circle cx="52" cy="58" r="4" fill="#6a4fb8"/>
+    <circle cx="52" cy="58" r="1.5" fill="#f4ab2a"/>
+    <circle cx="62" cy="92" r="3.5" fill="#f4ab2a"/>
+    <circle cx="62" cy="92" r="1.2" fill="#c92d72"/>
+  </g>
+</svg>
+
+<svg class="sprig sprig-br" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g fill="none" stroke="#5d8a4e" stroke-width="1.5" stroke-linecap="round">
+    <path d="M20 20 Q 50 60, 70 110"/>
+    <path d="M30 35 Q 45 40, 50 55" />
+    <path d="M40 55 Q 55 60, 58 75" />
+    <path d="M50 80 Q 65 82, 68 95" />
+    <path d="M25 28 Q 40 18, 50 22" />
+    <path d="M36 48 Q 52 42, 58 48" />
+  </g>
+  <g>
+    <circle cx="22" cy="22" r="5" fill="#e7438a"/>
+    <circle cx="22" cy="22" r="2" fill="#f4ab2a"/>
+    <circle cx="52" cy="58" r="4" fill="#6a4fb8"/>
+    <circle cx="52" cy="58" r="1.5" fill="#f4ab2a"/>
+    <circle cx="62" cy="92" r="3.5" fill="#f4ab2a"/>
+    <circle cx="62" cy="92" r="1.2" fill="#c92d72"/>
+  </g>
+</svg>
+
+<main class="page">
+
+  <p class="eyebrow">Backyard Bloomstead</p>
+
+  <h1>Spring <em>is here</em>.</h1>
+
+  <p class="tagline">Come see our spring bouquets.</p>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 180 24" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="12" x2="68" y2="12" stroke="#5d8a4e" stroke-width="1" opacity="0.55"/>
+      <line x1="112" y1="12" x2="180" y2="12" stroke="#5d8a4e" stroke-width="1" opacity="0.55"/>
+      <g transform="translate(90,12)">
+        <g fill="#f4ab2a">
+          <ellipse cx="0" cy="-6" rx="2.2" ry="4"/>
+          <ellipse cx="0" cy="6" rx="2.2" ry="4"/>
+          <ellipse cx="-6" cy="0" rx="4" ry="2.2"/>
+          <ellipse cx="6" cy="0" rx="4" ry="2.2"/>
+          <ellipse cx="-4.3" cy="-4.3" rx="2.2" ry="3.5" transform="rotate(-45 -4.3 -4.3)"/>
+          <ellipse cx="4.3" cy="-4.3" rx="2.2" ry="3.5" transform="rotate(45 4.3 -4.3)"/>
+          <ellipse cx="-4.3" cy="4.3" rx="2.2" ry="3.5" transform="rotate(45 -4.3 4.3)"/>
+          <ellipse cx="4.3" cy="4.3" rx="2.2" ry="3.5" transform="rotate(-45 4.3 4.3)"/>
+        </g>
+        <circle r="3" fill="#c92d72"/>
+        <circle r="1" fill="#2a2438"/>
+      </g>
+    </svg>
+  </div>
+
+  <h2 class="sub-heading">Find us at our carts</h2>
+
+  <div class="locations">
+
+    <article class="location">
+      <div class="day">Thursday &amp; Friday</div>
+      <div class="time">3:00 — 6:00 PM</div>
+      <div class="place">Willamette Christian Center</div>
+      <div class="address">2500 W 18th Ave · Eugene, OR 97402</div>
+      <div class="address-note">Off of City View</div>
+    </article>
+
+    <article class="location">
+      <div class="day">Saturday</div>
+      <div class="time">11:00 AM — 2:00 PM</div>
+      <div class="place">Outside Duluth Trading Company</div>
+      <div class="address">3320 Gateway St · Springfield, OR 97477</div>
+      <div class="address-note">By Gateway Mall</div>
+    </article>
+
+  </div>
+
+  <footer>
+    <div class="brand">Backyard Bloomstead</div>
+    <div class="brand-sub">Grown · Gathered · Arranged</div>
+    <div class="coming-soon">Full site blooming soon</div>
+  </footer>
+
+</main>
+
+</body>
+</html>
