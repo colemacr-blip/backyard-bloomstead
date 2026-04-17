@@ -24,7 +24,7 @@
         <li><a href="#">About the Garden</a></li>
         <li><a href="#">Flower Meanings</a></li>
         <li><a href="#">Journal</a></li>
-        <li><a href="index.html#signup" class="btn btn--soft" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Join the Garden List</a></li>
+        <li><a href="index.html#signup" class="btn btn--primary" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">Join the Garden List</a></li>
       </ul>
     </div>
   </nav>
@@ -52,11 +52,26 @@
       <div class="grid-2">
         <div>
           <h2>Find Us</h2>
-          <p class="mt-sm">Our flower cart pops up locally with fresh-cut seasonal bouquets. Follow us on Instagram or join the Garden List for real-time cart location updates.</p>
-          <div style="margin-top: var(--space-md); padding: var(--space-md); background: var(--green-lightest); border-radius: var(--radius);">
-            <h4 style="margin-bottom: 0.5rem;">This Season</h4>
-            <p style="font-size: 0.92rem; margin-bottom: 0;">Cart schedule updates weekly. Sign up for the Garden List to get notified when and where we'll be set up next.</p>
+          <p class="mt-sm">Our flower cart pops up at the same trusted spots each week. Stop by during one of our weekly windows below — or follow along for special pop-up events and seasonal hours.</p>
+
+          <div class="locations-card">
+            <h4>This Week's Schedule</h4>
+            <div class="location-row">
+              <span class="icon">&#x1F4CD;</span>
+              <span>
+                <strong>Willamette Christian Center</strong>
+                <span class="meta">2500 W 18th Ave · Eugene, OR · Thursdays &amp; Fridays 3&ndash;6 PM</span>
+              </span>
+            </div>
+            <div class="location-row">
+              <span class="icon">&#x1F4CD;</span>
+              <span>
+                <strong>Outside Duluth Trading Co.</strong>
+                <span class="meta">3320 Gateway St · Springfield, OR · Saturdays 11 AM&ndash;2 PM</span>
+              </span>
+            </div>
           </div>
+
           <a href="index.html#signup" class="btn btn--primary mt-md">Get Cart Updates</a>
         </div>
         <div>
@@ -86,7 +101,7 @@
         </div>
 
         <div class="cart-product">
-          <div class="cart-product__image" style="background: var(--pink-lightest); display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: var(--radius);">
+          <div class="cart-product__image" style="background: var(--rose-wash); display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: var(--radius);">
             <p style="font-size: 0.8rem; color: var(--text-light); text-align: center; padding: 1rem; margin: 0;">Photo coming soon</p>
           </div>
           <div class="cart-product__info">
@@ -158,7 +173,7 @@
         <p>Get cart schedule updates, new product drops, and seasonal offerings delivered to your inbox.</p>
         <form class="signup__form" onsubmit="event.preventDefault(); alert('Thank you for joining!');">
           <input type="email" placeholder="Your email address" required>
-          <button type="submit" class="btn btn--primary">Join</button>
+          <button type="submit" class="btn btn--accent">Join the List</button>
         </form>
       </div>
     </div>
