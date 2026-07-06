@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Backyard Bloomstead — Spring is Here</title>
-<meta name="description" content="Find Backyard Bloomstead's fresh spring bouquets at our Eugene and Springfield, Oregon pop-up carts.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><g transform='translate(16,16)'><g fill='%23f4ab2a'><ellipse cx='0' cy='-9' rx='3' ry='5.5'/><ellipse cx='0' cy='9' rx='3' ry='5.5'/><ellipse cx='-9' cy='0' rx='5.5' ry='3'/><ellipse cx='9' cy='0' rx='5.5' ry='3'/><ellipse cx='-6.4' cy='-6.4' rx='3' ry='5' transform='rotate(-45 -6.4 -6.4)'/><ellipse cx='6.4' cy='-6.4' rx='3' ry='5' transform='rotate(45 6.4 -6.4)'/><ellipse cx='-6.4' cy='6.4' rx='3' ry='5' transform='rotate(45 -6.4 6.4)'/><ellipse cx='6.4' cy='6.4' rx='3' ry='5' transform='rotate(-45 6.4 6.4)'/></g><circle r='4' fill='%23c92d72'/><circle r='1.3' fill='%232a2438'/></g></svg>">
+<title>Backyard Bloomstead — Summer is Here</title>
+<meta name="description" content="Backyard Bloomstead has found a home at Her Sanctuary. Visit us at 1710 Chambers Street in Eugene, Oregon for fresh bouquets, seasonal flowers, and the Bloom Bar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -144,13 +143,13 @@
     animation: fadeUp 1s ease-out 0.35s both;
   }
 
-  .locations {
+  .sections {
     display: flex;
     flex-direction: column;
     gap: 28px;
   }
 
-  .location {
+  .card {
     position: relative;
     padding: 32px 28px;
     background: rgba(255, 255, 255, 0.35);
@@ -158,10 +157,11 @@
     border-radius: 2px;
     animation: fadeUp 1s ease-out both;
   }
-  .location:nth-child(1) { animation-delay: 0.45s; }
-  .location:nth-child(2) { animation-delay: 0.6s; }
+  .card:nth-child(1) { animation-delay: 0.45s; }
+  .card:nth-child(2) { animation-delay: 0.6s; }
+  .card:nth-child(3) { animation-delay: 0.75s; }
 
-  .location::before {
+  .card::before {
     content: '';
     position: absolute;
     top: -1px;
@@ -171,7 +171,7 @@
     background: var(--rose);
   }
 
-  .day {
+  .label {
     font-family: 'Fraunces', serif;
     font-weight: 500;
     font-size: 22px;
@@ -199,10 +199,10 @@
     margin-bottom: 6px;
   }
 
-  .address {
+  .address, .body-copy {
     font-size: 14px;
     color: var(--ink-soft);
-    line-height: 1.5;
+    line-height: 1.55;
   }
 
   .address-note {
@@ -213,10 +213,30 @@
     margin-top: 4px;
   }
 
+  .offerings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .offering {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid rgba(93, 138, 78, 0.28);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--sage-deep);
+    background: rgba(255, 255, 255, 0.45);
+  }
+
   footer {
     margin-top: 64px;
     text-align: center;
-    animation: fadeUp 1s ease-out 0.75s both;
+    animation: fadeUp 1s ease-out 0.9s both;
   }
 
   .brand {
@@ -236,10 +256,10 @@
     margin-top: 8px;
   }
 
-  .coming-soon {
+  .button {
     display: inline-block;
     margin-top: 24px;
-    padding: 10px 22px;
+    padding: 11px 24px;
     border: 1.5px solid var(--rose);
     border-radius: 999px;
     font-size: 11px;
@@ -248,6 +268,13 @@
     text-transform: uppercase;
     color: var(--rose-deep);
     background: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.85);
   }
 
   @keyframes fadeUp {
@@ -301,9 +328,9 @@
 
   <p class="eyebrow">Backyard Bloomstead</p>
 
-  <h1>Spring <em>is here</em>.</h1>
+  <h1>Summer <em>is here</em>.</h1>
 
-  <p class="tagline">Come see our spring bouquets.</p>
+  <p class="tagline">We've found a home.</p>
 
   <div class="divider" aria-hidden="true">
     <svg viewBox="0 0 180 24" xmlns="http://www.w3.org/2000/svg">
@@ -326,24 +353,36 @@
     </svg>
   </div>
 
-  <h2 class="sub-heading">Find us at our carts</h2>
+  <h2 class="sub-heading">Visit us at Her Sanctuary</h2>
 
-  <div class="locations">
+  <div class="sections">
 
-    <article class="location">
-      <div class="day">Friday</div>
-      <div class="time">3:00 — 6:00 PM</div>
-      <div class="place">Willamette Christian Center</div>
-      <div class="address">2500 W 18th Ave · Eugene, OR 97402</div>
-      <div class="address-note">Off of City View</div>
+    <article class="card">
+      <div class="label">Our New Location</div>
+      <div class="place">Her Sanctuary</div>
+      <div class="address">1710 Chambers Street · Eugene, OR 97402</div>
+      <div class="address-note">Our flower cart is currently outside the storefront during our remodel.</div>
     </article>
 
-    <article class="location">
-      <div class="day">Saturday</div>
-      <div class="time">11:00 AM — 2:00 PM</div>
-      <div class="place">Outside Duluth Trading Company</div>
-      <div class="address">3320 Gateway St · Springfield, OR 97477</div>
-      <div class="address-note">By Gateway Mall</div>
+    <article class="card">
+      <div class="label">Summer Hours</div>
+      <div class="time">Wednesday — Friday</div>
+      <div class="place">2:00 — 6:00 PM</div>
+      <br>
+      <div class="time">Saturday</div>
+      <div class="place">10:00 AM — 2:00 PM</div>
+    </article>
+
+    <article class="card">
+      <div class="label">Coming Soon Inside</div>
+      <div class="body-copy">Backyard Bloomstead is now part of Her Sanctuary. As the storefront blooms open, you'll find fresh bouquets, the Bloom Bar, seasonal flower gifts, curated books, tea, coffee, and beautiful pauses inside.</div>
+      <div class="offerings" aria-label="Coming soon offerings">
+        <span class="offering">Bloom Bar</span>
+        <span class="offering">Fresh Bouquets</span>
+        <span class="offering">Seasonal Gifts</span>
+        <span class="offering">Curated Books</span>
+        <span class="offering">Beautiful Pauses</span>
+      </div>
     </article>
 
   </div>
@@ -351,7 +390,6 @@
   <footer>
     <div class="brand">Backyard Bloomstead</div>
     <div class="brand-sub">Grown · Gathered · Arranged</div>
-    <div class="coming-soon">Full site blooming soon</div>
   </footer>
 
 </main>
